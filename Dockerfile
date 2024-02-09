@@ -14,6 +14,10 @@ RUN npm install
 # Copy the rest of the application files from host to container
 COPY . /app
 
+# Set environment variables
+ARG REACT_APP_OPENAI_API_KEY
+ENV REACT_APP_OPENAI_API_KEY=$REACT_APP_OPENAI_API_KEY
+
 # Inform Docker that the container will listen on port 3000 at runtime
 EXPOSE 3000
 

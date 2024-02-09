@@ -16,10 +16,24 @@ Idea2Market-AI is a web application that takes product idea input, generates log
 
 ## Usage
 
+**->To utilize the generate button, please ensure you have access to the OpenAI API. Once obtained, create a .env file and add that in variable REACT_APP_OPENAI_API_KEY**
+
 1. Start the development server: `npm start`.
 2. Open your browser and visit `http://localhost:3000`.
 3. Enter your product idea and explore the generated logos.
 
+## Docker Setup
+
+To run Idea2Market-AI using Docker, follow these steps:
+
+**->To utilize the generate button, please ensure you have access to the OpenAI API. Once obtained, create a .env file and add that in variable REACT_APP_OPENAI_API_KEY**
+
+1. Make sure you have Docker installed on your system.
+2. Build the Docker image: docker build -t idea2market-ai .
+3. Run the Docker container: docker run -p 3000:3000 idea2market-ai
+4. Open your browser and visit `http://localhost:3000`.
+
 ## Contributing
 
 Contributions are welcome! If you'd like to improve this project or add new features, feel free to submit a pull request.
+
