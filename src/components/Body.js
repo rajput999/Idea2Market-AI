@@ -6,8 +6,8 @@ import loader2 from './loader2.gif'
 
 const Body = () => {
     const [textInput, setTextInput] = useState('');
-    const [img_url,setImg_url] = useState('/');
-    const [img,setimg] = useState("https://i.postimg.cc/6QczqnpG/Screenshot-2024-02-10-at-12-14-03-AM.png");
+    const [image_url,setImg_url] = useState('/');
+    const [imge,setimg] = useState("https://i.postimg.cc/6QczqnpG/Screenshot-2024-02-10-at-12-14-03-AM.png");
     const [recRslt, set_recRslt] = useState('');
     const [recLoader,set_recLoader] = useState();
 
@@ -124,7 +124,7 @@ const Body = () => {
                 <div className={classes.main_input}>
                     <input onChange={handleChange} placeholder="Type a message..." className={classes.input} />
                     <div className={classes.image_gen}>
-                        <img src={img_url==='/'?img:img_url} className={classes.img_gen} alt=""/>
+                        <img src={image_url==='/'?imge:image_url} className={classes.img_gen} alt="error"/>
                     </div>
                 </div>
                 <div className={classes.gen_btn}>
