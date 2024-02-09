@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import classes from './Body.module.css'
-import loading from './loading.gif'
-import loader2 from './loader2.gif'
+// import loading from './loading.gif'
+// import loader2 from './loader2.gif'
 
 
 const Body = () => {
     const [textInput, setTextInput] = useState('');
     const [recLoader,set_recLoader] = useState();
-    const [imge,setimg] = useState("https://i.postimg.cc/6QczqnpG/Screenshot-2024-02-10-at-12-14-03-AM.png");
-    const [recRslt, set_recRslt] = useState('');
-    const [image_url,setImg_url] = useState('/');
+    // const [imge,setimg] = useState("https://i.postimg.cc/6QczqnpG/Screenshot-2024-02-10-at-12-14-03-AM.png");
+    // const [recRslt, set_recRslt] = useState('');
+    // const [image_url,setImg_url] = useState('/');
 
     const isJSONString = (str) => {
       try {
@@ -21,14 +21,14 @@ const Body = () => {
     };
 
     const handleclick= async()=>{
-        setImg_url('/');
-        set_recRslt('');
+        // setImg_url('/');
+        // set_recRslt('');
         if(textInput===''){
             alert('Enter Promt')
             return
         }
-        setimg(loading);
-        set_recLoader(loader2);
+        // setimg(loading);
+        // set_recLoader(loader2);
         const response = await fetch(
             "https://api.openai.com/v1/images/generations",
             {
@@ -100,7 +100,7 @@ const Body = () => {
         console.log(recData.choices[0].message.content);
         var check = isJSONString(recData.choices[0].message.content);
         if(check){
-          set_recRslt((JSON.parse(recData.choices[0].message.content)));
+          // set_recRslt((JSON.parse(recData.choices[0].message.content)));
         }else{
           alert("Response is not the JSON string try again with some different Promt");
           set_recLoader();
@@ -108,7 +108,7 @@ const Body = () => {
 
         let data = await response.json();
         let data_array= data.data;
-        setImg_url(data_array[0].url)
+        // setImg_url(data_array[0].url)
         console.log(data)
     }
 
@@ -134,10 +134,11 @@ const Body = () => {
             <div className={classes.rec_main}>
                 <div>
                     {
-                      recRslt===''?""
+                      // recRslt===''?""
                       // <img src={recLoader} style={{height: "10vh",marginTop: "10vh"}} alt="not generated"/>
-                      :<div>
-                        {recRslt.map((item,index)=>{
+                      // :
+                      <div>
+                        {/* {recRslt.map((item,index)=>{
                           const ar_item=Object.values(item)
                           return(
                             <div key={index} className={recRslt===''?classes.none:classes.rec_body}>
@@ -146,7 +147,7 @@ const Body = () => {
                               <div className={classes.prdtDesc}>{ar_item[1]}</div>
                             </div>
                           )
-                        })}
+                        })} */}
                         </div>
                     }
                 </div>
