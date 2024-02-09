@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import classes from './Body.module.css'
-import logo from './logo.svg'
 import loading from './loading.gif'
 import loader2 from './loader2.gif'
 
@@ -8,7 +7,7 @@ import loader2 from './loader2.gif'
 const Body = () => {
     const [textInput, setTextInput] = useState('');
     const [img_url,setImg_url] = useState('/');
-    const [img,setimg] = useState(logo);
+    const [img,setimg] = useState("https://i.postimg.cc/6QczqnpG/Screenshot-2024-02-10-at-12-14-03-AM.png");
     const [recRslt, set_recRslt] = useState('');
     const [recLoader,set_recLoader] = useState();
 
