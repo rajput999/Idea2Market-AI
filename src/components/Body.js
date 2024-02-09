@@ -134,7 +134,8 @@ const Body = () => {
             <div className={classes.rec_main}>
                 <div>
                     {
-                      recRslt===''?<img src={recLoader} style={{height: "10vh",marginTop: "10vh"}} alt="not generated"/>
+                      recRslt===''?""
+                      // <img src={recLoader} style={{height: "10vh",marginTop: "10vh"}} alt="not generated"/>
                       :<div>
                         {recRslt.map((item,index)=>{
                           const ar_item=Object.values(item)
