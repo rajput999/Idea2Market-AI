@@ -124,7 +124,7 @@ const Body = () => {
                 <div className={classes.main_input}>
                     <input onChange={handleChange} placeholder="Type a message..." className={classes.input} />
                     <div className={classes.image_gen}>
-                        <img src={image_url==='/'?imge:image_url} className={classes.img_gen} alt="error"/>
+                        <img src={image_url==='/'?imge:image_url} className={classes.img_gen} alt="Generated Image"/>
                     </div>
                 </div>
                 <div className={classes.gen_btn}>
@@ -134,7 +134,7 @@ const Body = () => {
             <div className={classes.rec_main}>
                 <div>
                     {
-                      recRslt===''?<img src={recLoader} style={{height: "10vh",marginTop: "10vh"}} alt="error"/>
+                      recRslt===''?<img src={recLoader} style={{height: "10vh",marginTop: "10vh"}} alt="Image2"/>
                       :<div>
                         {recRslt.map((item,index)=>{
                           const ar_item=Object.values(item)
