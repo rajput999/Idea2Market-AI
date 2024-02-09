@@ -6,10 +6,10 @@ import loader2 from './loader2.gif'
 
 const Body = () => {
     const [textInput, setTextInput] = useState('');
-    const [image_url,setImg_url] = useState('/');
     const [imge,setimg] = useState("https://i.postimg.cc/6QczqnpG/Screenshot-2024-02-10-at-12-14-03-AM.png");
     const [recRslt, set_recRslt] = useState('');
     const [recLoader,set_recLoader] = useState();
+    const [image_url,setImg_url] = useState('/');
 
     const isJSONString = (str) => {
       try {
