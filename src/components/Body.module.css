@@ -1,0 +1,111 @@
+.body_total{
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.m_body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+}
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main_input{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 20px;
+    background-color: rgb(34, 52, 63);
+    height: 10vh;
+    width:52vw;
+}
+.input{
+    border-radius: 20px;
+    /* background-color: white; */
+    background-color: rgb(34, 52, 63);
+    border:none;
+    width: 45vw;
+    color: white;
+    font-size: 1.1rem;
+    padding-left: 16px;
+    outline: none;
+}
+input.input::placeholder { 
+    color: white;
+}
+.gen_btn{
+    height: 10vh;
+    width: 9rem;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: rgb(162,19,105);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+    font-weight: bold;
+}
+.image_gen{
+    background-color: rgb(34, 52, 63);
+    border:none;
+    height: 10vh;
+    color: white;
+    margin-right: 30px;
+}
+.img_gen{
+    padding: 0.5vh;
+    border-radius: 10px;
+    height: 9vh;
+}
+.rec_main{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    margin-top: 10vh;
+    color: white;
+    max-height: 60vh;
+    overflow: auto;
+}
+.rec_body{
+    margin-top: 3vh;
+    padding: 3vw;
+    width: 50vw;
+    border-radius: 18px;
+    background-color: rgb(34, 52, 63);
+}
+
+@media (max-width:950px){
+    .rec_body{
+        width: 65vw;
+    }
+}
+@media (max-width:700px){
+    .search{
+        display: flex;
+        flex-direction: column;
+    }
+    .rec_main{
+        margin-top: 3vh;
+    }
+    .gen_btn{
+        margin-top: 2vh;
+        height: 7vh;
+    }
+    .main_input{
+        width:72vw;
+    }
+}
+@media (max-width:450px){
+    .main_input{
+        width:83vw;
+    }
+    .rec_body{
+        width: 80vw;
+    }
+}
