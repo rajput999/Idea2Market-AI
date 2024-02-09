@@ -9,7 +9,7 @@ const Header = () =>{
                 <img src="https://i.postimg.cc/qvn5JNK8/logo1.png" className={classes.logo_img} alt="logo"/>
                 </div>
                 <div className={classes.title}>
-                    Iterative AI
+                    Idea2Market-AI
                 </div>
             </div>
             <div className={classes.right_nav}>
