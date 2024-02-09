@@ -1,15 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import classes from './Body.module.css'
 import logo from './logo.svg'
-import { Configuration, OpenAIApi } from "openai";
-import OpenAI from 'openai'
 import loading from './loading.gif'
 import loader2 from './loader2.gif'
-
-const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
-const openai = new OpenAI({
-    apiKey, dangerouslyAllowBrowser: true ,
-});
 
 
 const Body = () => {
@@ -31,7 +24,7 @@ const Body = () => {
     const handleclick= async()=>{
         setImg_url('/');
         set_recRslt('');
-        if(textInput==''){
+        if(textInput===''){
             alert('Enter Promt')
             return
         }
@@ -121,7 +114,7 @@ const Body = () => {
     }
 
     const handleChange = async(event) => {
-        if(event.target.value=='') return 0;
+        if(event.target.value==='') return 0;
         setTextInput(event.target.value);
     }
 
@@ -132,7 +125,7 @@ const Body = () => {
                 <div className={classes.main_input}>
                     <input onChange={handleChange} placeholder="Type a message..." className={classes.input} />
                     <div className={classes.image_gen}>
-                        <img src={img_url=='/'?img:img_url} className={classes.img_gen}/>
+                        <img src={img_url==='/'?img:img_url} className={classes.img_gen} alt=""/>
                     </div>
                 </div>
                 <div className={classes.gen_btn}>
@@ -142,12 +135,12 @@ const Body = () => {
             <div className={classes.rec_main}>
                 <div>
                     {
-                      recRslt==''?<img src={recLoader} style={{height: "10vh",marginTop: "10vh"}}/>
+                      recRslt===''?<img src={recLoader} style={{height: "10vh",marginTop: "10vh"}} alt=""/>
                       :<div>
                         {recRslt.map((item,index)=>{
                           const ar_item=Object.values(item)
                           return(
-                            <div key={index} className={recRslt==''?classes.none:classes.rec_body}>
+                            <div key={index} className={recRslt===''?classes.none:classes.rec_body}>
                               <div className={classes.prdtName} style={{fontWeight:"bolder"}}>-&gt;{ar_item[0]}</div>
                               <br/> 
                               <div className={classes.prdtDesc}>{ar_item[1]}</div>
