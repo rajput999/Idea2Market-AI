@@ -1,4 +1,4 @@
-# Idea2Market-AI
+# Idea2Market-AI  --> https://idea2market-ai.netlify.app/
 
 Idea2Market-AI is a web application that takes product idea input, generates logos, and finds similar products in the market using the OpenAI API. It's built with React.js and leverages the power of artificial intelligence to enhance the product ideation process.
 
